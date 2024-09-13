@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.controller.TodoController"
+      spacing="10" alignment="CENTER">
+    <TableView fx:id="taskTable">
+        <columns>
+            <TableColumn fx:id="descriptionColumn" text="Description"/>
+            <TableColumn fx:id="completedColumn" text="Completed"/>
+        </columns>
+    </TableView>
+    <TextField fx:id="newTaskField" promptText="New task description"/>
+    <Button text="Add Task" onAction="#handleAddTask"/>
+    <Button text="Mark Completed" onAction="#handleMarkCompleted"/>
+    <Button text="Delete Task" onAction="#handleDeleteTask"/>
+    <Button text="Update Task" onAction="#handleUpdateTask"/>
+</VBox>
